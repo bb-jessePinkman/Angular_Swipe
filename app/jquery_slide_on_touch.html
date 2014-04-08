@@ -1,0 +1,78 @@
+<html ng-app="touchapp">
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+	<link rel="stylesheet" href="css/enable_slide.css">
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<script>
+
+</script>
+
+</head>
+<body>	
+	<div class="mobile" id="element" ng-swipe-left="swiped()" ng-swipe-right="swiped()" ng-controller="touchscreen" ng-cloak>
+		<center><div class="touch_area" >
+							
+									<div id="carousel-example-generic" class="carousel" >
+							
+										<div class="carousel-inner" style="padding-bottom:20%">
+											<div class="item active fonts">
+												<b style="font-size:30px">{{zone}}</b>
+											</div>
+
+											<div class="item fonts">
+												<b>{{zone}}</b>
+											</div>
+										</div>
+
+										<ol class="carousel-indicators">
+											<li style="background-color:{{indicator1}}" class="{{active1}}"></li>
+											<li style="background-color:{{indicator2}}" class="{{active2}}"></li>
+										</ol>
+
+									</div> 
+							<!--<b style="font-size:30px">{{zone}}</b>-->
+				</div>
+				
+		</center>
+		<div ng-hide="swipeme" class="content" style="float:left">
+			<div class="col-md-12">
+				<div>
+					<div id="tab1" class="tabs" style="margin-left:10%"><center>Z0</center></div>
+				</div>
+				<div>	
+					<div id="tab2" class="tabs"><center>Z0</center></div>
+				</div>
+				<div>
+					<div id="tab3" class="tabs"><center>Z0</center></div>
+				</div>	
+				<div>
+					<div id="tab4" class="tabs"><center>Z0</center></div>
+				</div>
+			</div>
+		</div>
+		<div ng-show="swipeme"  class="content">
+			<div class="col-md-12">
+				<div>
+					<div id="tab1" class="tabs" style="margin-left:10%"><center>Z1</center></div>
+				</div>
+				<div>	
+					<div id="tab2" class="tabs"><center>Z1</center></div>
+				</div>
+				<div>
+					<div id="tab3" class="tabs"><center>Z1</center></div>
+				</div>	
+				<div>
+					<div id="tab4" class="tabs"><center>Z1</center></div>
+				</div>
+			</div>
+		</div>	
+
+	</div>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>	
+	<!--<script src="js/hammer.min.js"></script>-->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="js/angular-touch.js"></script>
+	<script src="js/slide_on_touch.js"></script>
+	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
